@@ -1,0 +1,90 @@
+/* Basic CSS */
+.container > li {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #ffeead;
+    box-sizing: border-box;
+    background-color: #96ceb4;
+    list-style-type: none;
+  }
+  
+  html, body {
+    background-color: #ffeead;
+    margin: 10px;
+  }
+  
+  .container {
+    padding: 0;
+    border: 5px solid #ffcc5c;
+  }
+  .search-input {
+    background: #ff6e68;
+    border: 0;
+    width: 100%;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ffeead;
+    color: #ffeead;
+  }
+  ::placeholder{
+    color: #ffeead;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .container > li {
+    background-color: #96ceb4;
+  }
+  
+  
+  /*.container > div:nth-child(2) {
+    background-color: #ff6f69;
+  }
+  
+  .container > div:nth-child(3) {
+    background-color: #88d8b0;
+  }
+  
+  .container > div:nth-child(4) {
+    background-color: #96ceb4;
+  }
+  */
+
+
+/* Flexbox Nav CSS */
+
+.container {
+    display: flex;
+}
+
+.container > li {
+    /* flex: 1; */
+}
+
+.search {
+    flex: 1;
+  }
+
+@media all and (max-width: 600px) {
+    .container {
+        flex-wrap: wrap; /* Allow flexible item to wrap */
+    }
+
+    .container > li {
+        flex-basis: 50%;    /* Make each item take up 50% of the available width */
+    }
+}
+
+/* Small devices */
+@media all and (max-width: 400px) {
+    .container > li {
+        flex-basis: 100%;   /* Make only one item per row */
+    }
+
+    .search {
+        order: 1; /* Place the search item at the bottom. Default value is 0. */
+    }
+}
